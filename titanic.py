@@ -9,7 +9,7 @@ st.set_page_config(page_title="Titanic interactive Museum",layout="wide") #confi
 @st.cache_data #Stores cache
 
 def load_data(): #function to load data
-    df = pd.read_csv(r'C:\Users\leo21\Desktop\Upgrade_hub\Github_projects\Titanic_project\Titanic_project\titanic.csv') 
+    df = pd.read_csv(r'C:\Users\leo21\Desktop\Upgrade_hub\Github_projects\Titanic_project\Titanic_project\clean_titanic.csv') 
     df_clean = df.copy()
     return df_clean
 
