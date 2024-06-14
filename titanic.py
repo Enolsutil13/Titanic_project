@@ -9,7 +9,7 @@ st.set_page_config(page_title="Titanic interactive Museum",layout="wide") #confi
 @st.cache_data #Stores cache
 
 def load_data(): #function to load data
-    df = pd.read_csv(r'C:\Users\leo21\Desktop\Upgrade_hub\Github_projects\Titanic_project\Titanic_project\clean_titanic.csv') 
+    df = pd.read_csv(r'clean_titanic.csv') 
     df_clean = df.copy()
     return df_clean
 
@@ -18,7 +18,7 @@ def load_data(): #function to load data
 data = load_data() 
 
 data['Survived'] = data['Survived'].map({0: 'Dead', 1: 'Alive'})
-st.sidebar.image(r"C:\Users\leo21\Desktop\Upgrade_hub\Github_projects\Titanic_project\Titanic_project\Pictures\tema-ilustracion-iceberg.png", width=150)
+st.sidebar.image(r"Pictures/tema-ilustracion-iceberg.png", width=150)
 option = st.sidebar.radio( #Creates a radio button on the sidebar
     "Select a section:",
     ["Landing", "Passengers distribution by ticket","Passengers class distribution","Passengers port distribution", "See Dataset"]
@@ -52,7 +52,7 @@ st.title("Titanic Database")
 def show_landing(): #function to show landing section
     st.header("Welcome to the Titanic Museum Database")
     st.write("Use the side menu to navigate through different sections and obtain specific information.")
-    st.image(r'C:\Users\leo21\Desktop\Upgrade_hub\Github_projects\Titanic_project\Titanic_project\Pictures\k-mitch-hodge-y-9-X5-4-vU-unsplash.jpg', caption = 'Credits: K. Mitch Hodge via Unsplash')
+    st.image(r'Pictures/k-mitch-hodge-y-9-X5-4-vU-unsplash.jpg', caption = 'Credits: K. Mitch Hodge via Unsplash')
 
     with st.expander('Data origin'):
         st.markdown("""
@@ -79,7 +79,7 @@ def show_landing(): #function to show landing section
 
     with st.expander("Route map"):
         st.write("The titanic picked up passengers in Southampton(S), Cherbourg(C) and Queenstown(Q)-(The city of Queenstown is currently called Cobh)-. The number of passengers picked up at each port is shown here.")
-        st.image(r'C:\Users\leo21\Desktop\Upgrade_hub\Github_projects\Titanic_project\Titanic_project\Pictures\AdobeStock_322554404.jpeg', caption='Adobe Stock')
+        st.image(r'Pictures/AdobeStock_322554404.jpeg', caption='Adobe Stock')
         port_counts = data['Embarked'].value_counts()
         fig = px.pie(port_counts, values=port_counts.values, names=port_counts.index, title='Total passengers per port')
         st.plotly_chart(fig)
