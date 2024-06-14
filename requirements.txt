@@ -1,13 +1,8 @@
-Libraries:
-import streamlit as st
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-import seaborn as sns
-import plotly.express as px
-from sklearn.preprocessing import OneHotEncoder, StandardScaler
-from sklearn.model_selection import train_test_split, cross_val_score
-from sklearn.neighbors import KNeighborsRegressor
-from sklearn.metrics import mean_squared_error
 
-I include the file config.toml, which includes colors to visualize the streamlit presentation better. You should copy and paste it in your .streamlit folder, located in your working directory environment or your global directory.
+streamlit
+pandas
+numpy
+matplotlib
+seaborn
+plotly
+scikit-learn
