@@ -18,4 +18,4 @@ The data used in this project has been provided by Upgrade Hub. This dataset has
                        I have cleaned almost 20% of null/NaN data in the 'Age' column, 77% in the 'Cabin' column and 0.2% in the 'Embarked' column.
                        The columns I used the most are: Survived, Pclass, Name, Sex, Ticket and Embarked 
 ## REMEMBER ##
-Read the requirements.txt document to set the color palette for streamlit, so you can visualize it in your pc.
+I include the file config.toml, which includes colors to visualize the streamlit presentation better. You should copy and paste it in your .streamlit folder, located in your working directory environment or your global directory.
